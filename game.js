@@ -1,6 +1,7 @@
 /* Delhi Battle prototype. Add your own Supabase project URL + anon/publishable key below. Never put a service_role/secret key in browser code. */
-const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_OR_PUBLISHABLE_KEY';
+const SUPABASE_URL = 'https://radiqiygrwoigbmxhdcn.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_3N0XKSxPfwt43J6sNhJUwQ_mQr9fk-m
+';
 const canvas=document.getElementById('game'),ctx=canvas.getContext('2d');
 const statusEl=document.getElementById('status');let supabase=null,channel=null,online=false,roomId='DELHI1';
 const keys=new Set(),touch=new Set(),remote=new Map(),shots=[];let lastBroadcast=0,lastShot=0;
