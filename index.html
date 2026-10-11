@@ -100,6 +100,9 @@ bindHold('left','left');bindHold('right','right');bindHold('jump','jump');bindHo
 addEventListener('keydown',e=>{keys[e.code]=true;if(['Space','ArrowUp','ArrowLeft','ArrowRight'].includes(e.code))e.preventDefault()});addEventListener('keyup',e=>keys[e.code]=false);
 canvas.addEventListener('pointermove',e=>{let r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top});canvas.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'){mouse.down=true;mouse.x=e.clientX;mouse.y=e.clientY}});addEventListener('pointerup',e=>{if(e.pointerType==='mouse')mouse.down=false});
 addEventListener('keydown',e=>{if(e.code==='KeyF')keys.KeyF=true});addEventListener('keyup',e=>{if(e.code==='KeyF')keys.KeyF=false});
+window.startGame = startGame;
+window.chooseTeam = chooseTeam;
+window.chooseTime = chooseTime;
 })();
 </script>
 </body>
