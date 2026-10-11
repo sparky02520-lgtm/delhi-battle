@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Delhi Battle — Browser Prototype</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <header><div><div class="eyebrow">A CARTOON POLITICAL SATIRE ARENA</div><h1>DELHI <span>BATTLE</span></h1><p>Same city. Different slogans. Keep it silly.</p></div><div class="pill">2D MULTIPLAYER PROTOTYPE</div></header>
+  <section class="join card">
+    <label>Nickname<input id="nickname" maxlength="18" value="Player" autocomplete="nickname"></label>
+    <label>Team<select id="team"><option value="CJP">CJP — Blue</option><option value="BJP">BJP — Saffron</option></select></label>
+    <label>Room code<input id="room" maxlength="12" value="DELHI1" autocapitalize="characters"></label>
+    <button id="joinBtn">JOIN ARENA</button><span id="status" role="status">Offline preview · Add Supabase keys to enable online rooms</span>
+  </section>
+  <main class="game card">
+    <div class="hud"><span class="blue">CJP <b id="blueCount">0</b></span><span id="timer">DELHI ARENA</span><span class="orange">BJP <b id="orangeCount">0</b></span></div>
+    <canvas id="game" width="960" height="540" aria-label="Top-down Delhi Battle game"></canvas>
+    <div class="controls"><span>Laptop: WASD / arrow keys to move · Space to throw a paper ball</span><span>Phone: use the pad and THROW button</span></div>
+    <div class="mobile-controls"><div class="pad"><button data-dir="up">▲</button><div><button data-dir="left">◀</button><button data-dir="down">▼</button><button data-dir="right">▶</button></div></div><button id="throwBtn" class="throw">THROW<br>📄</button></div>
+  </main>
+  <section class="bottom"><div class="card"><h2>HOW TO PLAY</h2><ol><li>Choose a nickname and team.</li><li>Share the same room code with friends.</li><li>Move around the Delhi-inspired arena and toss paper balls.</li><li>First prototype: playful knockback, no realistic weapons.</li></ol></div><div class="card"><h2>WHAT'S IN THIS STARTER?</h2><p>Canvas-based 2D movement, cartoon team colors, responsive touch controls, and optional Supabase Realtime room broadcasting.</p><p class="note">This is an early prototype. Multiplayer is best-effort and client-side; a competitive public release needs server-side validation and abuse controls.</p></div></section>
+  <footer>Fan-made satire prototype · Not affiliated with any political party or public figure.</footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="game.js"></script>
+</body></html>
